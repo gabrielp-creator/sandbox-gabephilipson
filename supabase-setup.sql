@@ -45,5 +45,5 @@ create policy "Anyone can read access" on sandbox_access for select using (true)
 
 -- Seed the Compass sandbox
 insert into sandboxes (slug, name, description, status, auto_approve)
-values ('compass', 'Compass, PM Agent Pipeline', 'A multi-agent AI pipeline for product managers, from discovery to delivery.', 'active', true)
+values ('compass', 'Compass — PM Agent Pipeline', 'A multi-agent AI pipeline for product managers, from discovery to delivery.', 'active', true)
 on conflict (slug) do nothing;

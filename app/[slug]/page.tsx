@@ -80,7 +80,7 @@ function CompassSandbox() {
     <div className={styles.compassStatus}>
       <div className={styles.compassHeader}>
         <div>
-          <h1 className={styles.compassTitle}>Compass, PM Agent Pipeline</h1>
+          <h1 className={styles.compassTitle}>Compass — PM Agent Pipeline</h1>
           <p className={styles.compassSub}>
             A multi-agent AI pipeline for product managers, from discovery to delivery
           </p>
