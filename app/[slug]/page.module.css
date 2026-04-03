@@ -1,0 +1,266 @@
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem var(--padding-x) 4rem;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-label);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.placeholder {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+/* Compass Status Page */
+
+.compassStatus {
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.compassHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.compassTitle {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 22px;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.compassSub {
+  font-size: 14px;
+  color: var(--color-body);
+}
+
+.phaseBadge {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 3px;
+  background: var(--color-status-live-bg);
+  color: var(--color-status-live-text);
+  white-space: nowrap;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.5px solid var(--color-divider);
+}
+
+@media (max-width: 600px) {
+  .metricsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metricValue {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 28px;
+  color: var(--color-text);
+}
+
+.metricNote {
+  font-size: 12px;
+  color: var(--color-light);
+  margin-top: 0.25rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-label);
+  margin-bottom: 1rem;
+}
+
+/* Pipeline Stages */
+
+.stagesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .stagesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stageCard {
+  padding: 1rem;
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.stageName {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.stageStatus {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.stageSpeccing {
+  background: var(--color-status-live-bg);
+  color: var(--color-status-live-text);
+}
+
+.stagePhaseII {
+  color: var(--color-light);
+  background: none;
+}
+
+.stageDesc {
+  font-size: 13px;
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+/* Build Sequence */
+
+.buildList {
+  display: flex;
+  flex-direction: column;
+}
+
+.buildRow {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 0.5px solid var(--color-divider);
+  gap: 1rem;
+}
+
+.buildNum {
+  font-size: 13px;
+  color: var(--color-light);
+  width: 24px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.buildName {
+  font-size: 14px;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.buildDone {
+  text-decoration: line-through;
+  color: var(--color-light);
+}
+
+.buildStatus {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.statusDone {
+  background: var(--color-status-live-bg);
+  color: var(--color-status-live-text);
+}
+
+.statusNext {
+  background: var(--color-primary-lightest);
+  color: var(--color-primary);
+}
+
+.statusPending {
+  color: var(--color-light);
+}
+
+/* Stack */
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.stackTag {
+  font-size: 13px;
+  color: var(--color-body);
+}
+
+/* Footer */
+
+.compassFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid var(--color-divider);
+  font-size: 12px;
+  color: var(--color-light);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Request Access Prompt */
+
+.promptCard {
+  max-width: 480px;
+  margin-top: 3rem;
+}
+
+.promptTitle {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.promptDesc {
+  font-size: 15px;
+  color: var(--color-body);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}

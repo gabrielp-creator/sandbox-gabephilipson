@@ -1,0 +1,27 @@
+.header {
+  border-bottom: 0.5px solid var(--color-divider);
+  padding: 1rem 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+.label {
+  font-family: var(--font-abel), 'Abel', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-light);
+}

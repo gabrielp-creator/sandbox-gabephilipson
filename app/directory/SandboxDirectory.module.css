@@ -1,0 +1,102 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  border: 0.5px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.cardTitle {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.badge {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.badgeActive {
+  background: var(--color-status-live-bg);
+  color: var(--color-status-live-text);
+}
+
+.badgeSoon {
+  background: #FFF3CD;
+  color: #856404;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: var(--color-body);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.requestButton,
+.openButton {
+  font-family: var(--font-abel), 'Abel', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.requestButton {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.requestButton:hover {
+  background: var(--color-primary-medium);
+}
+
+.requestButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.openButton {
+  background: var(--color-status-live-bg);
+  color: var(--color-status-live-text);
+}
+
+.openButton:hover {
+  background: #c3e6cb;
+}
+
+.disabledButton {
+  font-family: var(--font-abel), 'Abel', sans-serif;
+  font-size: 13px;
+  color: var(--color-light);
+  padding: 8px 0;
+}

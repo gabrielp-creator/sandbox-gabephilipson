@@ -1,0 +1,58 @@
+:root {
+  --color-primary: #005C8F;
+  --color-primary-medium: #1C75BC;
+  --color-primary-light: #5FA6DB;
+  --color-primary-lightest: #CCEAFC;
+  --color-teal: #0B4F6C;
+
+  --color-text: #1a1a1a;
+  --color-body: #555;
+  --color-muted: #666;
+  --color-light: #888;
+  --color-border: #B8C0C4;
+  --color-divider: #e0e0e0;
+  --color-bg-light: #f5f8fb;
+  --color-label: #676C74;
+
+  --color-status-live-bg: #D4EDDA;
+  --color-status-live-text: #1a6b35;
+
+  --max-width: 900px;
+  --padding-x: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: var(--color-text);
+  background: #fff;
+  font-family: var(--font-abel), 'Abel', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+}

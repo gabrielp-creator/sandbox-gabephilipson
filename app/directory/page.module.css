@@ -1,0 +1,28 @@
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem var(--padding-x);
+}
+
+.eyebrow {
+  font-family: var(--font-abel), 'Abel', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-label);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.headline {
+  font-family: var(--font-audiowide), 'Audiowide', sans-serif;
+  font-size: 24px;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.intro {
+  font-size: 15px;
+  color: var(--color-body);
+  margin-bottom: 2rem;
+}
