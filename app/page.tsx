@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { getSession } from './lib/auth';
 import Header from './components/Header';
 import SubscribeForm from './SubscribeForm';
+import LoginForm from './LoginForm';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -23,7 +24,14 @@ export default async function LandingPage() {
             The sandbox gives you hands-on access to working AI projects from the POC Lab.
             Subscribe to browse available demos and request access to any project that interests you.
           </p>
-          <SubscribeForm />
+          <div className={styles.tabs}>
+            <h2 className={styles.tabHeading}>New here?</h2>
+            <SubscribeForm />
+            <div className={styles.divider}>
+              <span className={styles.dividerText}>Already subscribed?</span>
+            </div>
+            <LoginForm />
+          </div>
         </div>
       </main>
     </>

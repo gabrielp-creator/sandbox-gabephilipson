@@ -32,3 +32,29 @@
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+
+.tabHeading {
+  font-family: var(--font-abel), 'Abel', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color-label);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  margin: 2rem 0;
+  border-top: 0.5px solid var(--color-divider);
+  text-align: center;
+  position: relative;
+}
+
+.dividerText {
+  font-size: 13px;
+  color: var(--color-light);
+  background: #fff;
+  padding: 0 1rem;
+  position: relative;
+  top: -0.65rem;
+}

@@ -9,6 +9,12 @@
   padding: 0 var(--padding-x);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -24,4 +30,21 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-light);
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.navLink {
+  font-family: var(--font-abel), 'Abel', sans-serif;
+  font-size: 13px;
+  color: var(--color-muted);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
 }

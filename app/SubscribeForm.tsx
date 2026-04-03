@@ -1,16 +1,14 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
 import styles from './SubscribeForm.module.css';
 
 export default function SubscribeForm() {
-  const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [role, setRole] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
   async function handleSubmit(e: FormEvent) {
@@ -25,16 +23,25 @@ export default function SubscribeForm() {
         body: JSON.stringify({ name, email, company, role }),
       });
 
+      const data = await res.json();
+
       if (!res.ok) {
-        const data = await res.json();
         throw new Error(data.error || 'Failed to subscribe');
       }
 
-      router.push('/directory');
+      setStatus('success');
     } catch (err) {
       setStatus('error');
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
     }
+  }
+
+  if (status === 'success') {
+    return (
+      <div className={styles.success}>
+        Check your inbox. We sent a confirmation link to verify your email.
+      </div>
+    );
   }
 
   return (
