@@ -58,11 +58,17 @@
 
 .metricsRow {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
   border-bottom: 0.5px solid var(--color-divider);
+}
+
+@media (max-width: 900px) {
+  .metricsRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
@@ -147,6 +153,11 @@
 }
 
 .stageSpeccing {
+  background: var(--color-status-live-bg);
+  color: var(--color-status-live-text);
+}
+
+.stageComplete {
   background: var(--color-status-live-bg);
   color: var(--color-status-live-text);
 }

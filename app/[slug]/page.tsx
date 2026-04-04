@@ -85,7 +85,7 @@ function CompassSandbox() {
             A multi-agent AI pipeline for product managers, from discovery to delivery
           </p>
         </div>
-        <span className={styles.phaseBadge}>Phase I, Design Complete</span>
+        <span className={styles.phaseBadge}>Phase I, POC Complete</span>
       </div>
 
       <div className={styles.metricsRow}>
@@ -95,7 +95,7 @@ function CompassSandbox() {
           <span className={styles.metricNote}>POC</span>
         </div>
         <div className={styles.metric}>
-          <span className={styles.metricLabel}>Agents designed</span>
+          <span className={styles.metricLabel}>Agents operational</span>
           <span className={styles.metricValue}>4</span>
           <span className={styles.metricNote}>Discovery, Strategy, Requirements, Orchestrator</span>
         </div>
@@ -106,8 +106,13 @@ function CompassSandbox() {
         </div>
         <div className={styles.metric}>
           <span className={styles.metricLabel}>Docs complete</span>
-          <span className={styles.metricValue}>5</span>
+          <span className={styles.metricValue}>5+</span>
           <span className={styles.metricNote}>ADL, schema, roadmap, commands, context</span>
+        </div>
+        <div className={styles.metric}>
+          <span className={styles.metricLabel}>Pipeline runs</span>
+          <span className={styles.metricValue}>1</span>
+          <span className={styles.metricNote}>First test session, payment checkout scenario</span>
         </div>
       </div>
 
@@ -115,9 +120,9 @@ function CompassSandbox() {
         <h2 className={styles.sectionTitle}>Pipeline Stages</h2>
         <div className={styles.stagesGrid}>
           {[
-            { name: 'Discovery', status: 'Speccing next', desc: 'Problem framing, target user, JTBD, assumptions. Always manual gate, locked.' },
-            { name: 'Strategy', status: 'Speccing next', desc: 'Vision, OKRs, feature prioritization, roadmap horizon. Configurable gate.' },
-            { name: 'Requirements', status: 'Speccing next', desc: 'PRD, user stories, acceptance criteria, open questions. Configurable gate.' },
+            { name: 'Discovery', status: 'Complete', desc: 'Problem framing, target user, JTBD, assumptions. Always manual gate, locked.' },
+            { name: 'Strategy', status: 'Complete', desc: 'Vision, OKRs, feature prioritization, roadmap horizon. Configurable gate.' },
+            { name: 'Requirements', status: 'Complete', desc: 'PRD, user stories, acceptance criteria, open questions. Configurable gate.' },
             { name: 'Execution', status: 'Phase II', desc: 'Sprint planning, backlog, dependencies, risk flagging.' },
             { name: 'Launch', status: 'Phase II', desc: 'GTM checklist, release notes, rollout strategy.' },
             { name: 'Analytics', status: 'Phase II', desc: 'Post-launch metrics, feedback synthesis, iteration priorities.' },
@@ -125,7 +130,7 @@ function CompassSandbox() {
             <div className={styles.stageCard} key={stage.name}>
               <div className={styles.stageHeader}>
                 <span className={styles.stageName}>{stage.name}</span>
-                <span className={`${styles.stageStatus} ${stage.status === 'Phase II' ? styles.stagePhaseII : styles.stageSpeccing}`}>
+                <span className={`${styles.stageStatus} ${stage.status === 'Phase II' ? styles.stagePhaseII : stage.status === 'Complete' ? styles.stageComplete : styles.stageSpeccing}`}>
                   {stage.status}
                 </span>
               </div>
@@ -140,16 +145,16 @@ function CompassSandbox() {
         <div className={styles.buildList}>
           {[
             { step: 1, name: 'Documentation baseline', status: 'Done' },
-            { step: 2, name: 'Spec all four agents', status: 'Next' },
-            { step: 3, name: 'Scaffold GitHub repo + folder structure', status: 'Pending' },
-            { step: 4, name: 'Dossier schema + session init', status: 'Pending' },
-            { step: 5, name: 'Provider abstraction layer', status: 'Pending' },
-            { step: 6, name: 'Discovery agent, build + test', status: 'Pending' },
-            { step: 7, name: 'React app shell', status: 'Pending' },
-            { step: 8, name: 'Wire Discovery end-to-end', status: 'Pending' },
-            { step: 9, name: 'Strategy + Requirements agents', status: 'Pending' },
-            { step: 10, name: 'Orchestrator routing + auto mode timer', status: 'Pending' },
-            { step: 11, name: 'End-to-end test + prompt tuning', status: 'Pending' },
+            { step: 2, name: 'Spec all four agents', status: 'Done' },
+            { step: 3, name: 'Scaffold GitHub repo + folder structure', status: 'Done' },
+            { step: 4, name: 'Dossier schema + session init', status: 'Done' },
+            { step: 5, name: 'Provider abstraction layer', status: 'Done' },
+            { step: 6, name: 'Discovery agent, build + test', status: 'Done' },
+            { step: 7, name: 'React app shell', status: 'Done' },
+            { step: 8, name: 'Wire Discovery end-to-end', status: 'Done' },
+            { step: 9, name: 'Strategy + Requirements agents', status: 'Done' },
+            { step: 10, name: 'Orchestrator routing + auto mode timer', status: 'Done' },
+            { step: 11, name: 'End-to-end test + prompt tuning', status: 'Done' },
           ].map((item) => (
             <div className={styles.buildRow} key={item.step}>
               <span className={styles.buildNum}>{item.step}</span>
