@@ -111,8 +111,8 @@ function CompassSandbox() {
         </div>
         <div className={styles.metric}>
           <span className={styles.metricLabel}>Pipeline runs</span>
-          <span className={styles.metricValue}>1</span>
-          <span className={styles.metricNote}>First test session, payment checkout scenario</span>
+          <span className={styles.metricValue}>3</span>
+          <span className={styles.metricNote}>BC365 Forecasting scenario, all passing</span>
         </div>
       </div>
 
@@ -155,6 +155,15 @@ function CompassSandbox() {
             { step: 9, name: 'Strategy + Requirements agents', status: 'Done' },
             { step: 10, name: 'Orchestrator routing + auto mode timer', status: 'Done' },
             { step: 11, name: 'End-to-end test + prompt tuning', status: 'Done' },
+            { step: 12, name: 'Formatted agent output (risk + priority badges)', status: 'Done' },
+            { step: 13, name: 'Stage edit flow (pre-filled from dossier)', status: 'Done' },
+            { step: 14, name: 'Auto-fire between stages after approval', status: 'Done' },
+            { step: 15, name: 'Scenario selector (18 scenarios, filterable grid)', status: 'Done' },
+            { step: 16, name: 'Brief extraction with confidence indicators', status: 'Done' },
+            { step: 17, name: 'Intake coherence check (pass/warn/block)', status: 'Done' },
+            { step: 18, name: 'Field tooltips + loading indicator', status: 'Done' },
+            { step: 19, name: 'GitHub commit wiring', status: 'Done' },
+            { step: 20, name: 'Three full test runs (BC365 Forecasting)', status: 'Done' },
           ].map((item) => (
             <div className={styles.buildRow} key={item.step}>
               <span className={styles.buildNum}>{item.step}</span>
