@@ -100,19 +100,19 @@ function CompassSandbox() {
           <span className={styles.metricNote}>Discovery, Strategy, Requirements, Orchestrator</span>
         </div>
         <div className={styles.metric}>
-          <span className={styles.metricLabel}>Decisions locked</span>
-          <span className={styles.metricValue}>14</span>
-          <span className={styles.metricNote}>Architecture complete</span>
+          <span className={styles.metricLabel}>Build steps complete</span>
+          <span className={styles.metricValue}>20</span>
+          <span className={styles.metricNote}>Full Phase I sequence</span>
         </div>
         <div className={styles.metric}>
-          <span className={styles.metricLabel}>Docs complete</span>
-          <span className={styles.metricValue}>5+</span>
-          <span className={styles.metricNote}>ADL, schema, roadmap, commands, context</span>
+          <span className={styles.metricLabel}>Scenarios</span>
+          <span className={styles.metricValue}>18</span>
+          <span className={styles.metricNote}>Pre-built, filterable grid</span>
         </div>
         <div className={styles.metric}>
           <span className={styles.metricLabel}>Pipeline runs</span>
           <span className={styles.metricValue}>3</span>
-          <span className={styles.metricNote}>BC365 Forecasting scenario, all passing</span>
+          <span className={styles.metricNote}>BC365 Forecasting, all passing</span>
         </div>
       </div>
 
